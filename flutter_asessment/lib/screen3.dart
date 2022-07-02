@@ -2,16 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
+import 'screen2.dart';
+class screen3 extends StatelessWidget {
 
-class screen3 extends StatefulWidget {
-  const screen3({Key? key}) : super(key: key);
-
-  @override
-  State<screen3> createState() => _screen3State();
-}
-
-class _screen3State extends State<screen3> {
+   String? name;
   DateTime today =DateTime.now();
+   screen3({Key? key, this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +19,7 @@ class _screen3State extends State<screen3> {
                 height: 10,
               ),
               Center(
-                child: Text("Hi! Manvi",
+                child: Text("Hi! $name",
                 style: TextStyle(color: Colors.blue,fontSize: 16,fontWeight: FontWeight.bold),),
               ),
               Image(image: AssetImage('images/certificate.png')),

@@ -13,6 +13,8 @@ class screen2 extends StatefulWidget {
 }
 
 class _screen2State extends State<screen2> {
+  String? _nameError = null;
+  String? _emailError = null;
   TextEditingController namecontroller = TextEditingController();
   TextEditingController emailcontroller = TextEditingController();
 
@@ -36,6 +38,7 @@ class _screen2State extends State<screen2> {
               maxLength: 10,
               controller: namecontroller,
               decoration: InputDecoration(
+                errorText: _nameError,
                 icon: Icon(Icons.person,color: Colors.black,size: 35,),
                 hintText: "Student Name",
                 labelStyle: TextStyle(fontSize: 20, color: Colors.blue),
@@ -50,6 +53,7 @@ class _screen2State extends State<screen2> {
               maxLength: 10,
               controller: emailcontroller,
               decoration: InputDecoration(
+                errorText: _emailError,
                 icon: Icon(Icons.mail,color: Colors.black,),
                 hintText: "Email ID",
                 labelStyle: TextStyle(fontSize: 20, color: Colors.blue),
@@ -64,14 +68,40 @@ class _screen2State extends State<screen2> {
             child: SizedBox(
               width: 320,
               height: 50,
-              child: ElevatedButton(
+              child:  ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 20),
+                  primary: const Color.fromARGB(255, 102, 40, 172),
+                  fixedSize: const Size(200, 20),
+                ),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return screen3();
-                  }));
+                  final name = namecontroller.text;
+                  final email = emailcontroller.text;
+                  if (name.isEmpty || email.isEmpty) {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: const Text("Failed"),
+                          content: const Text("None of the field can be empty"),
+                          actions: [
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: const Text("OK"))
+                          ],
+                        );
+                      },
+                    );
+                  } else {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (conetext) {
+                      return screen3(name:namecontroller.text);
+                    }));
+                  }
                 },
-                child: const Text("Login"),
-                
+                child: const Text('Login'),
               ),
             ),
           ),)

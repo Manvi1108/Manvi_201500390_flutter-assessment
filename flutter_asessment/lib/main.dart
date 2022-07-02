@@ -10,6 +10,7 @@ import 'screen3.dart';
 void main()
 {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home:screen1()
   ));
   }
