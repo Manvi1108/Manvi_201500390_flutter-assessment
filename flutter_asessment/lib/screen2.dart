@@ -13,6 +13,9 @@ class screen2 extends StatefulWidget {
 }
 
 class _screen2State extends State<screen2> {
+  TextEditingController namecontroller = TextEditingController();
+  TextEditingController emailcontroller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +34,7 @@ class _screen2State extends State<screen2> {
             ),
             TextField(
               maxLength: 10,
+              controller: namecontroller,
               decoration: InputDecoration(
                 icon: Icon(Icons.person,color: Colors.black,size: 35,),
                 hintText: "Student Name",
@@ -44,6 +48,7 @@ class _screen2State extends State<screen2> {
             ),
             TextField(
               maxLength: 10,
+              controller: emailcontroller,
               decoration: InputDecoration(
                 icon: Icon(Icons.mail,color: Colors.black,),
                 hintText: "Email ID",

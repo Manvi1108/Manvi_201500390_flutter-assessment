@@ -9,5 +9,7 @@ import 'screen3.dart';
 
 void main()
 {
-  runApp(screen1());
-}
+  runApp(MaterialApp(
+    home:screen1()
+  ));
+  }
