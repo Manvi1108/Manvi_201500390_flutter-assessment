@@ -20,14 +20,14 @@ class screen3 extends StatelessWidget {
               ),
               Center(
                 child: Text("Hi! $name",
-                style: TextStyle(color: Colors.blue,fontSize: 16,fontWeight: FontWeight.bold),),
+                style: TextStyle(color: Colors.purple,fontSize: 26,fontWeight: FontWeight.bold),),
               ),
               Image(image: AssetImage('images/certificate.png')),
               SizedBox(
                 height: 20,
               ),
               Padding(padding: const EdgeInsets.all(10.0),
-              child: Container( height: 100,
+              child: Container( height: 200,
               child: 
               Text("You have Successfully completed Hybrid Mobile app development Course",style: 
               TextStyle(fontWeight: FontWeight.bold,fontSize: 30,

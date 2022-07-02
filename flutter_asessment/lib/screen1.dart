@@ -18,7 +18,7 @@ class screen1 extends StatelessWidget {
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 50,
-                    color: Colors.purple),
+                    color: Colors.blue),
               ),
               SizedBox(
                 height: 30,
@@ -41,7 +41,7 @@ class screen1 extends StatelessWidget {
                   child: Text("Get Started",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 30,
+                        fontSize: 24,
                       )))
             ],
           ),
