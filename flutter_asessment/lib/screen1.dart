@@ -16,24 +16,37 @@ class _screen1State extends State<screen1> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("TRAINING",style: TextStyle(fontWeight: FontWeight.bold),),
-          backgroundColor: Color.fromARGB(212, 40, 130, 195)),
-        body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: 
-          [
-            Image(
-                image: AssetImage('images/training'),
+      home: Center(
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text("TRAINING",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue),),
+            backgroundColor: Colors.white,
+            centerTitle: true,),
+          body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: 
+            [
+              Image(
+                  image: AssetImage('images/training.png'),
+                  height: 200,
+                  width: 150,
+                  ),
+                SizedBox(
+                  width: 200,
+                  height: 50,
                 ),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text("Get Started" , style: TextStyle(color: Colors.blue)),
-            ),
-          ]
-        ))
+              ElevatedButton(
+                onPressed: () {Navigator.push(context,
+                MaterialPageRoute(builder: (context){
+                  return screen2();
+                }));
+                },
+                child: const Text("Get Started" ),
+              ),
+            ]
+          ))
+        ),
       ),
     );
     
