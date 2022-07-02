@@ -26,7 +26,7 @@ class _screen1State extends State<screen1> {
           children: 
           [
             Image(
-                image: AssetImage('images/training.png'),
+                image: AssetImage('images/training'),
                 ),
             ElevatedButton(
               onPressed: () {},
