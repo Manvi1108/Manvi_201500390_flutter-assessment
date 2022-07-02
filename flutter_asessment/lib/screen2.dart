@@ -35,7 +35,6 @@ class _screen2State extends State<screen2> {
               height: 60,
             ),
             TextField(
-              maxLength: 10,
               controller: namecontroller,
               decoration: InputDecoration(
                 errorText: _nameError,
@@ -50,7 +49,6 @@ class _screen2State extends State<screen2> {
               height: 20,
             ),
             TextField(
-              maxLength: 10,
               controller: emailcontroller,
               decoration: InputDecoration(
                 errorText: _emailError,
