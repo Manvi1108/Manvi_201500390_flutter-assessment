@@ -8,7 +8,7 @@ class screen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Screen-1")),
+      appBar: AppBar(title: Text("Get Started")),
       body: Center(
         child: Container(
           child: Column(

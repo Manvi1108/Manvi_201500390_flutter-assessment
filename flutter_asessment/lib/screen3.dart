@@ -27,7 +27,7 @@ class screen3 extends StatelessWidget {
                 height: 20,
               ),
               Padding(padding: const EdgeInsets.all(10.0),
-              child: Container( height: 50,
+              child: Container( height: 100,
               child: 
               Text("You have Successfully completed Hybrid Mobile app development Course",style: 
               TextStyle(fontWeight: FontWeight.bold,fontSize: 30,
