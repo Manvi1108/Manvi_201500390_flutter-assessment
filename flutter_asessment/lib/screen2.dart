@@ -37,7 +37,7 @@ class _screen2State extends State<screen2> {
                 labelStyle: TextStyle(fontSize: 20, color: Colors.blue),
                 border: UnderlineInputBorder(),
               ),
-              keyboardType: TextInputType.number,
+              keyboardType: TextInputType.name,
             ),
               SizedBox(
               height: 20,
@@ -50,7 +50,7 @@ class _screen2State extends State<screen2> {
                 labelStyle: TextStyle(fontSize: 20, color: Colors.blue),
                 border: UnderlineInputBorder(),
               ),
-              keyboardType: TextInputType.number,
+              keyboardType: TextInputType.emailAddress,
             ),
             SizedBox( height: 50,),
             Center(
